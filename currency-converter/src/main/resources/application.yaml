@@ -1,0 +1,21 @@
+application:
+  api:
+    connection:
+      timeout: 20000
+    bcb:
+      urlbase: https://www3.bcb.gov.br/bc_moeda/rest/
+    currency-data:
+      urlbase: http://localhost:8081/currency
+    
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 30000
+      cache-null-values: true
+  redis:
+    host: localhost
+    port: 6379
+    password: cortex
+    database: 0
+    timeout: 60000

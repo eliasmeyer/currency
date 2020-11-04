@@ -1,0 +1,4 @@
+rootProject.name = 'currency'
+include 'currency-data'
+include 'currency-converter'
+

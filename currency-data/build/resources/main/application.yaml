@@ -1,0 +1,14 @@
+server:
+  port: 8081
+application:
+  database:
+    populate: false
+  api:
+    bcb:
+      urlbase: https://www3.bcb.gov.br/bc_moeda/rest/
+      timeout: 20000
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://cortex:cortex@cluster0.y7cph.mongodb.net/cortex?retryWrites=true&w=majority

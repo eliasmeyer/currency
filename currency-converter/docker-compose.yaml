@@ -1,0 +1,20 @@
+version: "3.7"
+volumes:
+  redisdb-volume:
+networks:
+  backend:
+    driver: bridge
+
+services:
+  redis-db:
+    image: redis:6.0-alpine
+    container_name: redis-db
+    hostname: redisdb
+    ports:
+      - 6379:6379
+    restart: always
+    command: redis-server --requirepass cortex
+    volumes:
+      - redisdb-volume:/var/lib/redis
+    networks:
+      - backend
